@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CornyArtem — Python Developer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  h1 { color: #58a6ff; font-size: 2.2em; margin-bottom: 10px; }
+  h2 { color: #f0b90b; font-size: 1.5em; margin: 40px 0 15px; border-bottom: 1px solid #21262d; padding-bottom: 8px; }
+  h3 { color: #58a6ff; font-size: 1.2em; margin-bottom: 8px; }
+  p { margin-bottom: 12px; }
+  .subtitle { color: #8b949e; font-size: 1.1em; margin-bottom: 30px; }
+  .section { margin-bottom: 30px; }
+  .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .skill {
+    background: #161b22;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.9em;
+  }
+  .case {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  .case h3 { color: #f0b90b; }
+  .case-meta {
+    color: #8b949e;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+  }
+  .case ul { list-style: none; padding-left: 0; }
+  .case ul li { padding-left: 20px; position: relative; margin-bottom: 6px; }
+  .case ul li:before { content: "→"; position: absolute; left: 0; color: #58a6ff; }
+  .services { list-style: none; }
+  .services li {
+    padding: 12px 16px;
+    border-left: 3px solid #f0b90b;
+    background: #161b22;
+    margin-bottom: 8px;
+    border-radius: 0 6px 6px 0;
+  }
+  .services li strong { color: #f0b90b; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 12px; }
+  .contacts a {
+    color: #58a6ff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    transition: 0.2s;
+  }
+  .contacts a:hover { background: #21262d; border-color: #58a6ff; }
+  footer { margin-top: 60px; color: #8b949e; font-size: 0.85em; text-align: center; }
+  code { background: #161b22; padding: 2px 6px; border-radius: 4px; color: #f0b90b; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>CornyArtem</h1>
+  <p class="subtitle">Python-разработчик · Telegram-боты · Парсинг · Автоматизация</p>
+
+  <div class="section">
+    <h2>👋 О себе</h2>
+    <p>Разрабатываю ботов и автоматизацию на Python. Специализируюсь на работе с API бирж, парсинге данных и Telegram-ботах с реальными сценариями использования.</p>
+    <p>Довожу задачи до работающего продакшена: код, деплой на сервер, стабильная работа 24/7.</p>
+  </div>
+
+  <div class="section">
+    <h2>🛠 Навыки</h2>
+    <div class="skills">
+      <span class="skill">Python</span>
+      <span class="skill">aiogram 3</span>
+      <span class="skill">Telegram Bot API</span>
+      <span class="skill">WebSocket</span>
+      <span class="skill">aiohttp</span>
+      <span class="skill">REST API</span>
+      <span class="skill">Binance API</span>
+      <span class="skill">Парсинг (BeautifulSoup, requests)</span>
+      <span class="skill">Linux / VPS</span>
+      <span class="skill">systemd</span>
+      <span class="skill">Git / GitHub</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>💼 Кейсы</h2>
+
+    <div class="case">
+      <h3>🚀 Corny Screener — Telegram-бот для сканирования крипторынка</h3>
+      <p class="case-meta">Python · aiogram 3 · WebSocket · Binance API · VPS</p>
+      <ul>
+        <li><strong>Задача:</strong> Мониторинг фьючерсного рынка в реальном времени — рост, падение, объёмы, импульсы, новые листинги.</li>
+        <li><strong>Решение:</strong> Заменил REST-запросы на WebSocket (мгновенные данные). Реализовал мультибиржевой анализ (Binance, OKX, Bybit, Bitget), NATR, funding rate, систему уведомлений об импульсах.</li>
+        <li><strong>Результат:</strong> Бот работает 24/7 на VPS, отдаёт данные в реальном времени, присылает уведомления об импульсах и листингах.</li>
+        <li><strong>Стек:</strong> <code>aiogram</code>, <code>websockets</code>, <code>aiohttp</code>, <code>mplfinance</code>, <code>systemd</code>.</li>
+      </ul>
+    </div>
+
+    <div class="case">
+      <h3>📊 Парсер цен и данных</h3>
+      <p class="case-meta">Python · requests · BeautifulSoup</p>
+      <ul>
+        <li><strong>Задача:</strong> Собирать данные с сайта по расписанию и сохранять в удобном формате.</li>
+        <li><strong>Решение:</strong> Парсер с обходом пагинации, обработкой ошибок, сохранением в CSV/JSON. Запуск по расписанию.</li>
+        <li><strong>Стек:</strong> <code>requests</code>, <code>BeautifulSoup</code>, <code>pandas</code>.</li>
+      </ul>
+    </div>
+
+    <div class="case">
+      <h3>🤖 Telegram-бот для автоматизации</h3>
+      <p class="case-meta">Python · aiogram 3</p>
+      <ul>
+        <li><strong>Задача:</strong> Бот для приёма заявок и отправки уведомлений администратору.</li>
+        <li><strong>Решение:</strong> Inline-кнопки, FSM-состояния для ввода данных, отправка админу, логирование в файл.</li>
+        <li><strong>Стек:</strong> <code>aiogram</code>, <code>SQLite</code> (опционально).</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>💼 Услуги</h2>
+    <ul class="services">
+      <li><strong>Telegram-боты</strong> — от 5 000 ₽. Приём заявок, уведомления, меню, интеграции с API.</li>
+      <li><strong>Парсеры данных</strong> — от 5 000 ₽. Сбор цен, контента, контактов. Экспорт в CSV/Excel/JSON.</li>
+      <li><strong>Автоматизация рутины</strong> — от 8 000 ₽. Отчёты, мониторинг, боты для бизнеса.</li>
+      <li><strong>Доработка существующих ботов</strong> — от 3 000 ₽. Починить, ускорить, добавить функции.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📬 Связаться</h2>
+    <div class="contacts">
+      <a href="https://t.me/cornyartem">Telegram: @cornyartem</a>
+      <a href="https://github.com/cornyartem">GitHub: cornyartem</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 CornyArtem · Python Developer
+  </footer>
+
+</div>
+</body>
+</html>
